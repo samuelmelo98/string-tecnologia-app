@@ -1,0 +1,68 @@
+# ===========================
+# Ignore de IDEs (IntelliJ, VSCode, etc)
+# ===========================
+.idea/
+*.iml
+.vscode/
+
+# ===========================
+# Backend Spring Boot (Maven)
+# ===========================
+/backend-springboot/target/
+/backend-springboot/.mvn/
+/backend-springboot/mvnw
+/backend-springboot/mvnw.cmd
+/backend-springboot/.classpath
+/backend-springboot/.project
+/backend-springboot/.settings/
+
+# ===========================
+# Frontend Angular (Node.js)
+# ===========================
+/frontend-angular/node_modules/
+/frontend-angular/dist/
+/frontend-angular/.angular/cache/
+/frontend-angular/.angular/
+/frontend-angular/package-lock.json
+/frontend-angular/npm-debug.log
+/frontend-angular/yarn-error.log
+/frontend-angular/.npm/
+
+# ===========================
+# Docker / Containers
+# ===========================
+/postgres/data/
+/postgres/logs/
+/keycloak/data/
+/keycloak/logs/
+/.env
+*.env
+**/docker-compose.override.yml
+**/docker-compose.*.yml
+.docker/
+
+# ===========================
+# Arquivos temporários de SO
+# ===========================
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+Thumbs.db
+ehthumbs.db
+.DS_Store
+
+# ===========================
+# Outras pastas de build gerais
+# ===========================
+/build/
+/out/
+/bin/
+/logs/
+/tmp/
+
+# ===========================
+# Testes / Relatórios temporários
+# ===========================
+test-output/
