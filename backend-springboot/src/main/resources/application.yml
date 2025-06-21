@@ -7,3 +7,23 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: http://keycloak:8080/realms/meu-realm
+logging:
+  level:
+    root: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG
+    org.springframework.security.oauth2.server.resource: DEBUG
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.orm.jdbc.bind: TRACE
+    org.hibernate.engine.jdbc.batch.internal.BatchingBatch: DEBUG
+    org.springframework.data.jpa.repository: DEBUG
+    org.springframework.transaction: DEBUG
+    org.springframework.boot.autoconfigure.security: DEBUG
+    org.springframework.web.servlet.DispatcherServlet: DEBUG
+
+
+
+
