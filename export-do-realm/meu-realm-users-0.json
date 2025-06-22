@@ -1,0 +1,26 @@
+{
+  "realm" : "meu-realm",
+  "users" : [ {
+    "id" : "e63d77fb-747f-47b5-97cf-45198df61853",
+    "username" : "samuel",
+    "firstName" : "samuel",
+    "lastName" : "melo",
+    "email" : "samuelmlo2014@gmail.com",
+    "emailVerified" : false,
+    "createdTimestamp" : 1750385589442,
+    "enabled" : true,
+    "totp" : false,
+    "credentials" : [ {
+      "id" : "7c591194-a699-4960-ac07-b75a7045b4c4",
+      "type" : "password",
+      "createdDate" : 1750480172810,
+      "secretData" : "{\"value\":\"1IBQDMTvtExgEFqTOp7K+qv5i8f69OF7SSl89diweMG2fXRJTgid4kT7nXFjE2i8pnpvJSFbp+Wwmq76zoDnog==\",\"salt\":\"+A6ASBrfOhrgSNA/1CtNNA==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":210000,\"algorithm\":\"pbkdf2-sha512\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "admin", "default-roles-meu-realm" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}
