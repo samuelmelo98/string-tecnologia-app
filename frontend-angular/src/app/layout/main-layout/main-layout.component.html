@@ -1,0 +1,25 @@
+<div class="layout-container">
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <img [src]="logoUrl" alt="Logo" class="logo">
+    <div class="user-info">
+      <img [src]="userPhotoUrl" alt="Foto do Usuário" class="user-photo">
+      <span class="user-name">{{ username }}</span>
+      <button (click)="logout()" class="logout-btn">Logout</button>
+    </div>
+  </header>
+
+  <!-- Side Menu + Main Content -->
+  <div class="main-content">
+    <nav class="side-menu">
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/profile" routerLinkActive="active">Perfil</a>
+      <a routerLink="/settings" routerLinkActive="active">Configurações</a>
+      <a routerLink="/main/users" routerLinkActive="active">Usuários</a>
+    </nav>
+
+    <section class="page-content">
+      <router-outlet></router-outlet>
+    </section>
+  </div>
+</div>

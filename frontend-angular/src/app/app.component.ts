@@ -2,10 +2,13 @@ import { Component } from '@angular/core';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { authConfig } from './auth-config';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
-  template: `
+  templateUrl: './app.component.html'
+
+  /*template: `
     <div *ngIf="!oauthService.hasValidAccessToken()">
       <button (click)="login()">Login</button>
     </div>
@@ -14,22 +17,17 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
       <button (click)="logout()">Logout</button>
       <button (click)="callApi()">Chamar API Protegida</button>
     </div>
-  `
+
+
+  `*/
 })
 export class AppComponent {
-  constructor(public oauthService: OAuthService, private http: HttpClient) {
-    this.oauthService.configure(authConfig);
-    this.oauthService.loadDiscoveryDocumentAndTryLogin().then(() => {
-      if (this.oauthService.hasValidAccessToken()) {
-        const token = this.oauthService.getAccessToken();
-        localStorage.setItem('access_token', token);
-        console.log('Token carregado e salvo no localStorage:', token);
-      } else {
-        console.warn('Nenhum token válido encontrado após o login.');
-      }
-    }).catch(err => {
-      console.error('Erro carregando discovery document:', err);
-    });
+  constructor(
+    private oauthService: OAuthService,
+    private router: Router,
+    private  http: HttpClient
+  ) {
+    this.configureOAuth();
 
   }
 
@@ -50,5 +48,18 @@ export class AppComponent {
         next: res => console.log('API retornou:', res),
         error: err => console.error('Erro na API:', err)
       });
+  }
+
+  private configureOAuth() {
+    this.oauthService.configure(authConfig);
+    this.oauthService.loadDiscoveryDocumentAndTryLogin().then(() => {
+      if (this.oauthService.hasValidAccessToken()) {
+        console.log("✅ Login OK");
+        const token = this.oauthService.getAccessToken();
+        localStorage.setItem('access_token', token);
+        console.log('Token carregado e salvo no localStorage:', token);
+        this.router.navigate(['/main']);
+      }
+    });
   }
 }

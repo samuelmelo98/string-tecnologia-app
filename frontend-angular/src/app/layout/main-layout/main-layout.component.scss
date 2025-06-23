@@ -1,0 +1,78 @@
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2937; /* cinza escuro */
+  color: white;
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.logout-btn {
+  padding: 5px 10px;
+  background-color: #ef4444; /* vermelho */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.side-menu {
+  width: 200px;
+  background-color: #374151; /* cinza mais escuro */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.side-menu a.active,
+.side-menu a:hover {
+  background-color: #4b5563; /* tom mais claro no hover ou ativo */
+}
+
+.page-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9fafb; /* fundo claro */
+  overflow-y: auto;
+}
